@@ -35,6 +35,6 @@
             <dependency-type>uses</dependency-type>
         </dependent-module>
         <property name="java-output-path" value="/exporter-demo/target/classes"/>
-        <property name="context-root" value="exporter-demo"/>
+        <property name="context-root" value="exporter"/>
     </wb-module>
 </project-modules>
