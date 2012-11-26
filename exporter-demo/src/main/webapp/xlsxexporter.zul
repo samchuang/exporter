@@ -1,0 +1,84 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<tabbox apply="org.zkoss.bind.BindComposer" 
+			viewModel="@id('vm') @init('demo.vm.FoodGroupVM')"
+			width="800px"
+			style="margin: auto;">
+		<tabs>
+			<tab label="Grid" />
+			<tab label="Listbox" />
+		</tabs>
+		<tabpanels>
+			<tabpanel>
+				<div hflex="1" vflex="1">
+					<toolbar>
+						<toolbarbutton label="Export Excel by component" onClick="@command('exportGridToExcel', ref=grid)"></toolbarbutton>
+						<toolbarbutton label="Export Excel by Data Model" onClick="@command('exportToExcelByDataModel')"></toolbarbutton>
+					</toolbar>
+					<grid id="grid" model="@bind(vm.foodModel)">
+						<columns menupopup="auto">
+				            <column sort="auto(Name)" label="Name" width="150px"/>
+				            <column sort="auto(TopNutrients)" label="Top Nutrients" hflex="1" /> 
+				            <column sort="auto(DailyPercent)" label="% of Daily" hflex="1" align="center"/>
+				            <column sort="auto(Calories)" label="Calories" hflex="1" align="center"  />
+				            <column sort="auto(Quantity)" label="Quantity" />
+				        </columns>
+				        <template name="model:group">
+				            <group label="@load(each)" />
+				        </template>
+				        <template name="model">
+				            <row>
+				                <label value="@load(each.name)" />
+				                <label value="@load(each.topNutrients)" />
+				                <label value="@load(each.dailyPercent)" />
+				                <label value="@load(each.calories)" />
+				                <label value="@load(each.quantity)" />
+				            </row>
+				        </template>
+				        <template name="model:groupfoot">
+				            <groupfoot label="@load(each)">
+				            </groupfoot>
+				        </template>
+					</grid>
+				</div>				
+			</tabpanel>
+			<tabpanel>
+				<div hflex="1" vflex="1">
+					<toolbar>
+						<toolbarbutton label="Export Excel by component" onClick="@command('exportListboxToExcel', ref=listbox)"></toolbarbutton>
+						<toolbarbutton label="Export Excel by Data Model" onClick="@command('exportToExcelByDataModel')"></toolbarbutton>
+					</toolbar>
+					
+					<listbox id="listbox"
+						model="@bind(vm.foodModel)">
+						<listhead>
+							<listheader label="Name" width="150px"/>
+					        <listheader label="Top Nutrients" hflex="1" /> 
+					        <listheader label="% of Daily" hflex="1" align="center"/>
+					        <listheader label="Calories" hflex="1" align="center"  />
+					        <listheader label="Quantity" />
+						</listhead>
+						<template name="model:group">
+					    	<listgroup label="@load(each)" />
+					    </template>
+						<template name="model">
+							<listitem>
+								<listcell label="@load(each.name)"></listcell>
+								<listcell label="@load(each.topNutrients)"></listcell>
+								<listcell label="@load(each.dailyPercent)"></listcell>
+								<listcell label="@load(each.calories)"></listcell>
+								<listcell label="@load(each.quantity)"></listcell>
+							</listitem>
+						</template>
+						<template name="model:groupfoot">
+							<listgroupfoot>
+								<listcell label="@load(each)"/>
+							</listgroupfoot>
+						</template>
+					</listbox>
+				</div>				
+			</tabpanel>
+		</tabpanels>
+	</tabbox>
+</zk>

@@ -1,0 +1,9 @@
+<?page title="new page title" contentType="text/html;charset=UTF-8"?>
+<zk>
+	<window mode="overlapped" shadow="false" position="center">
+		<separator />
+		<a href="pdfexporter.zul">Export to PDF</a>
+		<separator />
+		<a href="xlsxexporter.zul">Export to Excel</a>
+	</window>
+</zk>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="exporter-demo">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="exporter-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/exporter/exporter">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zpoi-3.8.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zpoi/zpoi">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zkex-6.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zkex/zkex">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zul-6.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zul/zul">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zk-6.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zk/zk">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zweb-6.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zweb/zweb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zcommon-6.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zcommon/zcommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zel-6.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zel/zel">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="zkbind-6.5.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/zkbind/zkbind">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="DynamicJasper-4.0.2.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/DynamicJasper/DynamicJasper">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/exporter-demo/target/classes"/>
+        <property name="context-root" value="exporter-demo"/>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.zkoss.exporter</groupId>
+	<artifactId>exporter-demo</artifactId>
+	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ZK Exporter Demo</name>
+	<description>ZK Exporter Demo</description>
+	<licenses>
+		<license>
+			<name>GNU General Public License, Version 3.0</name>
+			<url>http://www.gnu.org/licenses/gpl.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<properties>
+		<zk.version>6.5.0</zk.version>
+	</properties>
+	<repositories>
+		<repository>
+			<id>ZK CE</id>
+			<url>http://mavensync.zkoss.org/maven2</url>
+		</repository>
+		<repository>
+			<id>ZK EE Evaluation Repository</id>
+			<url>http://mavensync.zkoss.org/eval/</url>
+		</repository>
+	</repositories>
+	<dependencies>
+		<dependency>
+			<groupId>org.zkoss.exporter</groupId>
+			<artifactId>exporter</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>org.zkoss.zk</groupId>
+			<artifactId>zkex</artifactId>
+			<version>${zk.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.lowagie</groupId>
+			<artifactId>itext</artifactId>
+			<version>2.1.7</version>
+		</dependency>
+		<!-- TODO: rm DynamicJasper -->
+		<dependency>
+			<groupId>ar.com.fdvs</groupId>
+			<artifactId>DynamicJasper</artifactId>
+			<version>4.0.2</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>exporter</finalName>
+	</build>
+</project>
